@@ -1,0 +1,72 @@
+{% extends 'rhymesapp/base.html' %}
+{% load staticfiles %}
+{% block content %}
+   
+   <body>
+   <style>
+        body {
+            background-color: deepskyblue;
+        }
+    </style>
+    <html>
+            {% if user.is_authenticated %}
+                <div class="page-container">
+
+                    <h2 class="top-menu">Hello {{ user.username }},</h2>
+
+                </div>
+            {% endif %}
+            <div class="welcome">
+                <h1>Welcome to story time!</h1>
+                <p>A place to find all of your favorite nursery rhymes</p>
+            </div>
+            <div class="content container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="links">
+                            <!-- Example row of columns -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/humpty dumpty.jpeg" %}" alt="customer"/>
+                                        <div class="caption">
+                                            <h2>Listen to nursery rhymes</h2>
+                                            <p></p>
+                                            <p><a class="btn btn-primary" href=""
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/mom&daughter.jpeg" %}" alt="cupcakes"/>
+                                        <div class="caption">
+                                            <h2>Make reading fun!</h2>
+                                            <p><a class="btn btn-primary" href=""
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="{% static "images/happy.jpg" %}" alt="lunch"/>
+                                        <div class="caption">
+                                            <h2>Upgrade</h2>
+                                            <p>Here is what we offer!</p>
+                                            <p><a class="btn btn-primary" href=""
+                                                  role="button">View
+                                                details &raquo;</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+    </html>
+{% endblock %}
