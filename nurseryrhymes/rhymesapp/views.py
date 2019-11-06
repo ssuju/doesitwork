@@ -6,13 +6,13 @@ from django.shortcuts import render, get_object_or_404
 now = timezone.now()
 
 def home(request):
-   return render(request, 'rhymesapp/home.html',
+    return render(request, 'rhymesapp/home.html',
                  {'rhymesapp': home})
 
 @login_required
 def audio_list(request):
     return render(request, 'rhymesapp/audio_list.html',
-                 {'audios': audio})
+                 {'rhymesapp': audio_list})
 
 
 @login_required
@@ -30,3 +30,7 @@ def nurseryList(request):
 
 def nurseryPage(request):
     return render(request, 'rhymesapp/nurseryPage.html', {'rhymesapp': nurseryPage})
+
+@login_required
+def upgrade(request):
+    return render(request, 'rhymesapp/upgrade.html', {'rhymesapp': upgrade})

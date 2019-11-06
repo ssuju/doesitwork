@@ -73,10 +73,10 @@
 {#        </div>#}
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Nursery List</a></li>
-                <li><a href="">Audio</a></li>
-                <li><a href="">Upgrade</a></li>
+                <li><a href="{% url 'rhymesapp:home' %}">Home</a></li>
+                <li><a href="{% url 'rhymesapp:nurseryList' %}">Nursery List</a></li>
+                <li><a href="{% url 'rhymesapp:audio_list' %}">Audio</a></li>
+                <li><a href="{% url 'rhymesapp:upgrade' %}">Upgrade</a></li>
                 <li><a href="{% url 'rhymesapp:signup' %}">Sign Up</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
