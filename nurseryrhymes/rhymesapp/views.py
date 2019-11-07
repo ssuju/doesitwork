@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404
 
 now = timezone.now()
 
+
 def home(request):
     return render(request, 'rhymesapp/home.html',
                  {'rhymesapp': home})
@@ -25,11 +26,14 @@ def account_information(request):
 def signup(request):
     return render(request, 'rhymesapp/signup.html', {'rhymesapp': signup})
 
+
 def nurseryList(request):
     return render(request, 'rhymesapp/nurseryList.html', {'rhymesapp': nurseryList})
 
+
 def nurseryPage(request):
     return render(request, 'rhymesapp/nurseryPage.html', {'rhymesapp': nurseryPage})
+
 
 @login_required
 def upgrade(request):
